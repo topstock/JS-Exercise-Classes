@@ -1,4 +1,4 @@
-
+cd
 /*
   EXAMPLE TASK:
     - Write an Airplane class whose constructor initializes `name` from an argument.
@@ -42,10 +42,32 @@ class Airplane {
 */
 
 class Person {
-  
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
+  }
+  eat(edible) {
+    return this.stomach.push(edible);
+  }
+  poop() {
+    this.stomach = [];
+    return this.stomach
+  }
+  toString() {
+    return `${this.name}, ${this.age}`
+  }
 }
 
-/*
+const phil = new Person('phil', 35)
+console.log(phil);
+console.log(phil.eat('🍟'));
+console.log(phil.stomach);
+console.log(phil.poop());
+console.log(phil.toString());
+
+
+  /*
   TASK 2
     - Write a Car class whose constructor initializes `model` and `milesPerGallon` from arguments.
     - All instances built with Car:
